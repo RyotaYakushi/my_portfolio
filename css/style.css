@@ -1,0 +1,102 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
+html {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: "Roboto", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+h1 {
+  font-size: clamp(30px, 2vw, 48px);
+}
+
+h2 {
+  font-size: clamp(24px, 2vw, 36px);
+  color: #b6710d;
+}
+
+a {
+  font-size: clamp(14px, 2vw, 24px);
+}
+
+section {
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.header-top {
+  display: flex;
+  margin: 0 10em;
+  padding-top: 2em;
+  justify-content: space-between;
+}
+
+.fv {
+  background-image: url(../images/jpg/fv.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 80vh;
+}
+
+.logo {
+  width: 5em;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+.nav-list a:hover {
+  color: #b6710d;
+}
+
+.main_title {
+  width: 10em;
+  margin: 0 auto;
+  padding-top: 20vh;
+}
+
+.contact > a {
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #f7f7f7;
+  background-color: #b6710d;
+  padding: 1em 2.5em;
+  border-radius: 50px;
+}
+
+.footer-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  background-color: #b6710d;
+}
+.footer-wrapper p {
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

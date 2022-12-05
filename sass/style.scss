@@ -1,0 +1,68 @@
+@charset 'utf-8';
+//ファイル読みこみ
+@use "../sass/reset" as r;
+@use "../sass/base" as b;
+@use "../sass/mixin" as m;
+@use "../sass/variable" as v;
+
+// ヘッダー
+.header-top {
+  display: flex;
+  margin: 0 10em;
+  padding-top: 2em;
+  justify-content: space-between;
+}
+
+// 背景
+.fv {
+  background-image: url(../images/jpg/fv.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 80vh;
+}
+// ロゴ
+.logo {
+  width: 5em;
+}
+// ナビゲーション
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  a {
+    text-decoration: none;
+    color: v.$fontwhite;
+    transition: all 0.3s;
+    &:hover {
+      color: #b6710d;
+    }
+  }
+}
+.main_title {
+  width: 10em;
+  margin: 0 auto;
+  padding-top: 20vh;
+}
+// worksページ
+// skillページ
+
+// aboutページ
+
+// contactページ
+.contact > a {
+  @include m.btn;
+}
+
+// フッター
+.footer-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  background-color: v.$brownColor;
+
+  p {
+    color: v.$fontwhite;
+  }
+}
