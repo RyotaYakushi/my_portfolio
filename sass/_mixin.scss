@@ -11,12 +11,23 @@ $breakpoint: (
     @content;
   }
 }
-
+// contactボタン
 @mixin btn {
   font-size: 1.25em;
   text-decoration: none;
   color: v.$whiteColor;
   background-color: v.$brownColor;
-  padding: 1em 2.5em;
+  padding: 0.75em 2.5em;
   border-radius: 50px;
+}
+// 擬似要素の横線
+@mixin before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 40px;
+  position: absolute;
+  top: 7px;
+  left: -1em;
+  background-color: #000;
 }

@@ -8,7 +8,7 @@
 // ヘッダー
 .header-top {
   display: flex;
-  margin: 0 10em;
+  margin: 0 8em;
   padding-top: 2em;
   justify-content: space-between;
 }
@@ -20,7 +20,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 80vh;
+  height: 75vh;
 }
 // ロゴ
 .logo {
@@ -41,17 +41,98 @@
   }
 }
 .main_title {
-  width: 10em;
+  width: 8em;
   margin: 0 auto;
-  padding-top: 20vh;
+  padding-top: 5em;
 }
 // worksページ
+.works_card {
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 0 auto;
+  padding-top: 30px;
+  a {
+    width: 350px;
+    height: auto;
+    transition: all 0.3s;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
 // skillページ
-
+.skill_box {
+  display: flex;
+  max-width: 800px;
+  gap: 120px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  &-card {
+    text-align: left;
+    margin-top: 40px;
+    position: relative;
+    &::before {
+      @include m.before;
+    }
+    img {
+      width: 20px;
+      height: auto;
+    }
+    .html-icon {
+      width: 40px;
+    }
+  }
+}
 // aboutページ
+
+.about_box {
+  max-width: 1080px;
+  justify-content: space-between;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 40px;
+  &-img {
+    display: block;
+    width: 40%;
+    img {
+      height: 500px;
+      border-radius: 25px;
+    }
+  }
+  &-text {
+    text-align: left;
+    max-width: 40%;
+    dl {
+      margin-bottom: 20px;
+    }
+    dt {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    h3 {
+      position: relative;
+      margin-bottom: 5px;
+      font-weight: 400;
+      &::before {
+        @include m.before;
+        top: 5px;
+        height: 1em;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+  }
+}
 
 // contactページ
 .contact > a {
+  display: inline-block;
+  margin-top: 100px;
   @include m.btn;
 }
 
@@ -60,7 +141,8 @@
   display: flex;
   gap: 20px;
   justify-content: center;
-  background-color: v.$brownColor;
+  background-color: v.$brownDarkColor;
+  padding: 30px 0;
 
   p {
     color: v.$fontwhite;
