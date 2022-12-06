@@ -31,6 +31,7 @@
     </header>
     <!-- メインページ -->
     <main>
+      <!-- パンくずリスト -->
       <ol
         class="breadcrumb"
         itemscope
@@ -49,17 +50,57 @@
           itemprop="itemListElement"
           itemscope
           itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="/portfolio.html">
-            <span itemprop="name">ポートフォリオ</span>
-          </a>
+          <span itemprop="name">音楽学校</span>
           <meta itemprop="position" content="2" />
         </li>
       </ol>
+      <!-- 見出し -->
+      <h2 class="main_text">ポートフォリオ</h2>
+      <!--  main_img -->
+      <div class="main_section">
+        <div class="main_section-img">
+          <img src="../images/jpg/section/portfolio_page.jpg" alt="" />
+        </div>
+        <div class="main_section-textbox">
+          <dl>
+            <dt>担当</dt>
+            <dd>デザイン/コーディング</dd>
+          </dl>
+          <dl>
+            <dt>制作期間</dt>
+            <dd>
+              デザイン：３日間 <br />
+              コーディング:3日間
+            </dd>
+          </dl>
+          <dl>
+            <dt>デザインについて</dt>
+            <dd>
+              文字色とヘッダー、フッターは自分のバースデーカラーのシナモン色にしています。
+              メインの白色はまだデザイナーとして何色にも染まってないイメージを出しています。
+            </dd>
+          </dl>
+          <p>URL</p>
+        </div>
+        <!-- ページ -->
+        <a href="../html/fansite.html">
+          <div class="page_nation only">
+            <div class="page_nation-img">
+              <img src="../images/jpg/pagenation/fansite_page.jpg" alt="" />
+            </div>
+            <div class="page_nation-text">
+              <small class="before">前へ</small>
+              <small>ファンサイト（架空）</small>
+            </div>
+          </div>
+        </a>
+      </div>
     </main>
     <!-- トップ戻るボタン -->
     <a href="#" id="page-top">
       <div class="top-btn"></div>
     </a>
+
     <!-- フッター -->
     <footer>
       <div class="footer-wrapper">
@@ -71,4 +112,3 @@
     </footer>
   </body>
 </html>
-

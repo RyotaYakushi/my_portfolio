@@ -44,7 +44,7 @@ span {
 }
 
 p {
-  font-size: clamp(10px, 2vw, 16px);
+  font-size: clamp(12px, 2vw, 18px);
 }
 
 dt {
@@ -54,9 +54,11 @@ dt {
 
 dd {
   font-size: clamp(10px, 2vw, 16px);
+  font-weight: 300;
 }
 
 a {
+  text-decoration: none;
   font-size: clamp(14px, 2vw, 18px);
 }
 
@@ -306,4 +308,94 @@ footer {
 .main_text {
   text-align: center;
   padding-top: 100px;
+}
+
+.main_section {
+  max-width: 1080px;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+.main_section-textbox {
+  padding-top: 50px;
+}
+.main_section-textbox dl {
+  width: 60%;
+  margin-top: 30px;
+  padding-left: 1em;
+}
+.main_section-textbox dl dt {
+  position: relative;
+}
+.main_section-textbox dl dt::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 40px;
+  position: absolute;
+  top: 7px;
+  left: -1em;
+  background-color: #000;
+  height: 1em;
+  top: 5px;
+  left: -0.9em;
+}
+.main_section-textbox dl dd {
+  margin-top: 1.5px;
+}
+.main_section-textbox p {
+  font-weight: 600;
+  margin-top: 30px;
+  padding-left: 1em;
+  position: relative;
+}
+.main_section-textbox p::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 40px;
+  position: absolute;
+  top: 7px;
+  left: -1em;
+  background-color: #000;
+  height: 1em;
+  top: 5px;
+  left: -1px;
+}
+.main_section .page {
+  display: flex;
+  margin-top: 150px;
+  gap: 45px;
+}
+.main_section .page_nation {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  gap: 45px;
+  background-color: #fff;
+}
+.main_section .page_nation-img {
+  width: 50%;
+  transition: all 0.3s;
+}
+.main_section .page_nation-img:hover {
+  scale: 1.1;
+}
+.main_section .page_nation-text small {
+  color: #333;
+  display: block;
+}
+.main_section .page_nation-text .before:first-child::before {
+  content: "＜";
+  padding-right: 0.5em;
+}
+.main_section .page_nation-text .next:first-child::after {
+  content: "＞";
+  padding-left: 0.5em;
+}
+.main_section .next {
+  flex-direction: row-reverse;
+}
+.main_section .only {
+  margin-top: 150px;
+  max-width: 45%;
 }/*# sourceMappingURL=style.css.map */

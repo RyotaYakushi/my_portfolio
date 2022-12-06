@@ -34,6 +34,15 @@ $breakpoint: (
   left: -1em;
   background-color: #000;
 }
+// 擬似要素の矢印
+@mixin after-arrow {
+  content: "＞";
+  padding-left: 0.5em;
+}
+@mixin before-arrow {
+  content: "＜";
+  padding-right: 0.5em;
+}
 
 @mixin top_btn {
   width: 80px;
