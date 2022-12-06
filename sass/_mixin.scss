@@ -11,6 +11,9 @@ $breakpoint: (
     @content;
   }
 }
+@mixin header {
+  background-color: v.$brownDarkColor;
+}
 // contactボタン
 @mixin btn {
   font-size: 1.25em;
@@ -30,4 +33,18 @@ $breakpoint: (
   top: 7px;
   left: -1em;
   background-color: #000;
+}
+
+@mixin top_btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: v.$brownColor;
+  position: fixed;
+  bottom: 2em;
+  right: 2.5em;
+  border: none;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 999;
 }

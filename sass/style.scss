@@ -135,7 +135,23 @@
   margin-top: 100px;
   @include m.btn;
 }
+/* トップへ戻るボタン */
+.top-btn {
+  @include m.top_btn;
+}
 
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+.top-btn::after {
+  content: url("../images/png/Icon\ ionic-ios-arrow-up.png");
+  width: 35px;
+  height: 25px;
+  position: absolute;
+  top: 1.5em;
+  left: 1.25em;
+}
 // フッター
 .footer-wrapper {
   display: flex;
@@ -143,8 +159,58 @@
   justify-content: center;
   background-color: v.$brownDarkColor;
   padding: 30px 0;
-
   p {
     color: v.$fontwhite;
   }
+}
+
+// 下層ページ
+.header {
+  @include m.header;
+  &-inner {
+    display: flex;
+    align-items: center;
+    margin: 0 8em;
+    justify-content: space-between;
+    .logo_white {
+      padding-top: 1em;
+    }
+  }
+}
+//パンくずリスト
+.breadcrumb {
+  margin: 0 8em;
+  padding-top: 20px;
+  max-width: 1080px;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline; /*横に並ぶように*/
+  list-style: none;
+  font-weight: bold; /*太字*/
+}
+
+.breadcrumb li:after {
+  /* >を表示*/
+  content: ">";
+  padding: 0 0.2em;
+  color: #555;
+}
+
+.breadcrumb li:last-child:after {
+  content: "";
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: v.$brownColor;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+.main_text {
+  text-align: center;
+  padding-top: 100px;
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -17,6 +18,7 @@ html {
   line-height: 1.5;
   letter-spacing: 0.1em;
   font-size: 1rem;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,6 +37,10 @@ h2 {
 
 h3 {
   font-size: clamp(12px, 2vw, 18px);
+}
+
+span {
+  font-weight: 300;
 }
 
 p {
@@ -211,6 +217,35 @@ footer {
   border-radius: 50px;
 }
 
+/* トップへ戻るボタン */
+.top-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #b6710d;
+  position: fixed;
+  bottom: 2em;
+  right: 2.5em;
+  border: none;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 999;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.top-btn::after {
+  content: url("../images/png/Icon ionic-ios-arrow-up.png");
+  width: 35px;
+  height: 25px;
+  position: absolute;
+  top: 1.5em;
+  left: 1.25em;
+}
+
 .footer-wrapper {
   display: flex;
   gap: 20px;
@@ -220,4 +255,55 @@ footer {
 }
 .footer-wrapper p {
   color: #fff;
+}
+
+.header {
+  background-color: #885308;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  margin: 0 8em;
+  justify-content: space-between;
+}
+.header-inner .logo_white {
+  padding-top: 1em;
+}
+
+.breadcrumb {
+  margin: 0 8em;
+  padding-top: 20px;
+  max-width: 1080px;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline; /*横に並ぶように*/
+  list-style: none;
+  font-weight: bold; /*太字*/
+}
+
+.breadcrumb li:after {
+  /* >を表示*/
+  content: ">";
+  padding: 0 0.2em;
+  color: #555;
+}
+
+.breadcrumb li:last-child:after {
+  content: "";
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #b6710d;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+.main_text {
+  text-align: center;
+  padding-top: 100px;
 }/*# sourceMappingURL=style.css.map */
