@@ -1,9 +1,10 @@
 @use "variable" as v;
+// レスポンシブ
 
 $breakpoint: (
-  sp: "screen and (max-width: 767px)",
-  tab: "screen and (min-width: 768px)",
-  pc: "screen and (min-width: 1025px)",
+  sp: "screen and (max-width: 400px)",
+  tab: "screen and (max-width: 768px)",
+  pc: "screen and (max-width: 1079px)",
 );
 
 @mixin mq($bp) {

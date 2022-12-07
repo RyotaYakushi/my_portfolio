@@ -8,9 +8,77 @@
 // ヘッダー
 .header-top {
   display: flex;
-  margin: 0 8em;
+  margin: 0 5em;
   padding-top: 2em;
   justify-content: space-between;
+  align-items: center;
+  .item {
+    display: none;
+  }
+  // 768px以下
+  @include m.mq(tab) {
+    position: fixed;
+    top: 0;
+    background-color: #b6710d;
+    padding-top: 1em;
+    width: 100%;
+    margin: 0;
+    z-index: 10;
+    .item {
+      display: block;
+      position: relative;
+    }
+    .menu-trigger,
+    .menu-trigger span {
+      position: absolute;
+      display: inline-block;
+      transition: all 0.4s;
+      box-sizing: border-box;
+    }
+    .menu-trigger {
+      position: relative;
+      position: absolute;
+      position: fixed;
+      right: 5em;
+      top: 2.5em;
+      width: 50px;
+      height: 40px;
+      border: none;
+      background: none;
+      appearance: none;
+      cursor: pointer;
+    }
+    .menu-trigger span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: v.$whiteColor;
+      border-radius: 4px;
+    }
+    .menu-trigger span:nth-of-type(1) {
+      top: 2px;
+    }
+    .menu-trigger span:nth-of-type(2) {
+      top: 20px;
+    }
+    .menu-trigger span:nth-of-type(3) {
+      bottom: 0;
+    }
+    #menu.active {
+      transform: rotate(360deg);
+    }
+    #menu.active span:nth-of-type(1) {
+      transform: translateY(18px) rotate(-45deg);
+    }
+    #menu.active span:nth-of-type(2) {
+      transform: translateY(0) rotate(45deg);
+    }
+    #menu.active span:nth-of-type(3) {
+      opacity: 0;
+    }
+    /* ハンバーガーメニュー */
+  }
 }
 
 // 背景
@@ -19,18 +87,33 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100vw;
   height: 75vh;
 }
 // ロゴ
 .logo {
   width: 5em;
+  @include m.mq(tab) {
+    display: none;
+  }
+}
+.logo_white {
+  width: 5em;
+  display: none;
+  @include m.mq(tab) {
+    display: block;
+    margin-left: 5em;
+  }
 }
 // ナビゲーション
 .nav-list {
   display: flex;
   list-style: none;
   gap: 20px;
+  @include m.mq(tab) {
+    display: none;
+  }
   a {
     text-decoration: none;
     color: v.$fontwhite;
@@ -44,15 +127,50 @@
   width: 8em;
   margin: 0 auto;
   padding-top: 5em;
+  @include m.mq(tab) {
+    width: 5em;
+  }
 }
+
 // worksページ
 .works_card {
   max-width: 1080px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
   padding-top: 30px;
+  margin: 0 auto;
+  @include m.mq(tab) {
+    display: block;
+    width: 90vw;
+    height: auto;
+  }
+  @include m.mq(sp) {
+    display: block;
+    width: 90vw;
+  }
+  // 左よせ用の空箱
+  &::after {
+    content: "";
+    width: 350px;
+    height: 280px;
+    opacity: 0;
+    @include m.mq(pc) {
+      display: none;
+    }
+  }
+  // 左よせ用の空箱
+  &::before {
+    content: "";
+    width: 350px;
+    height: 280px;
+    opacity: 0;
+    order: 1;
+    @include m.mq(pc) {
+      display: none;
+    }
+  }
   a {
     width: 350px;
     height: auto;
@@ -60,16 +178,23 @@
     &:hover {
       scale: 1.1;
     }
+    img {
+      @include m.mq(tab) {
+        margin-bottom: 30px;
+      }
+    }
   }
 }
 // skillページ
 .skill_box {
   display: flex;
-  max-width: 800px;
+  max-width: 1080px;
   gap: 120px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
+  padding: 0 1.5em;
+
   &-card {
     text-align: left;
     margin-top: 40px;
@@ -87,24 +212,23 @@
   }
 }
 // aboutページ
-
 .about_box {
   max-width: 1080px;
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   padding-top: 40px;
   &-img {
-    display: block;
     width: 40%;
+    margin-left: 30px;
     img {
-      height: 500px;
       border-radius: 25px;
     }
   }
   &-text {
     text-align: left;
     max-width: 40%;
+    margin-right: 30px;
     dl {
       margin-bottom: 20px;
     }
@@ -151,6 +275,9 @@
   position: absolute;
   top: 1.5em;
   left: 1.25em;
+  @include m.mq(tab) {
+    left: 1.5em;
+  }
 }
 // フッター
 .footer-wrapper {
@@ -250,6 +377,7 @@
       }
     }
   }
+  // ページ遷移
   .page {
     display: flex;
     margin-top: 150px;
