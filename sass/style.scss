@@ -13,16 +13,15 @@
   width: 100%;
   display: flex;
   margin: 0;
-  padding-top: 2em;
+  padding-top: 1.5em;
   justify-content: space-between;
   align-items: center;
-
   .item {
     display: none;
   }
   // 768px以下
   @include m.mq(tab) {
-    background-color: #b6710d;
+    // background-color: #b6710d;
     padding-top: 1em;
     width: 100%;
     margin: 0;
@@ -83,7 +82,11 @@
     /* ハンバーガーメニュー */
   }
 }
-
+// ヘッダー固定時の背景色
+.is-active {
+  background-color: #b6710d;
+  z-index: 20;
+}
 // 背景
 .fv {
   background-image: url(../images/jpg/fv.jpg);
@@ -97,13 +100,13 @@
 // ロゴ
 .logo {
   width: 5em;
-  margin-left: 5em;
+  margin-left: 8em;
 }
 .logo_white {
   width: 5em;
   display: none;
-  margin-left: 5em;
-  transition: all.3s;
+  margin-left: 8em;
+  transition: all 0.3s;
 }
 .is-hidden {
   display: none;
@@ -129,10 +132,7 @@
     }
   }
 }
-.is-active {
-  background-color: #b6710d;
-  z-index: 20;
-}
+
 .main_title {
   width: 8em;
   margin: 0 auto;
@@ -145,7 +145,8 @@
 // worksページ
 .works_card {
   max-width: 1080px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
@@ -160,27 +161,27 @@
     display: block;
     width: 90vw;
   }
-  // 左よせ用の空箱
-  &::after {
-    content: "";
-    width: 350px;
-    height: 280px;
-    opacity: 0;
-    @include m.mq(pc) {
-      display: none;
-    }
-  }
-  // 左よせ用の空箱
-  &::before {
-    content: "";
-    width: 350px;
-    height: 280px;
-    opacity: 0;
-    order: 1;
-    @include m.mq(pc) {
-      display: none;
-    }
-  }
+  // // 左よせ用の空箱
+  // &::after {
+  //   content: "";
+  //   width: 350px;
+  //   height: 280px;
+  //   opacity: 0;
+  //   @include m.mq(pc) {
+  //     display: none;
+  //   }
+  // }
+  // // 左よせ用の空箱
+  // &::before {
+  //   content: "";
+  //   width: 350px;
+  //   height: 280px;
+  //   opacity: 0;
+  //   order: 1;
+  //   @include m.mq(pc) {
+  //     display: none;
+  //   }
+  // }
   a {
     width: 350px;
     height: auto;
@@ -272,6 +273,10 @@
 /* トップへ戻るボタン */
 .top-btn {
   @include m.top_btn;
+  @include m.mq(sp) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .active {
@@ -280,13 +285,16 @@
 }
 .top-btn::after {
   content: url("../images/png/Icon\ ionic-ios-arrow-up.png");
-  width: 35px;
-  height: 25px;
+  display: block;
   position: absolute;
   top: 1.5em;
   left: 1.25em;
   @include m.mq(tab) {
-    left: 1.5em;
+    left: 1.4em;
+  }
+  @include m.mq(sp) {
+    top: 1em;
+    left: 0.9em;
   }
 }
 // フッター
@@ -304,22 +312,106 @@
 // 下層ページ
 .header {
   @include m.header;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
   &-inner {
     display: flex;
     align-items: center;
-    margin: 0 8em;
+    margin: 0 3.5em;
     justify-content: space-between;
-    .logo_white {
+    .item {
+      display: none;
+    }
+    @include m.mq(tab) {
+      margin: 0 2em;
+      .item {
+        display: block;
+        position: relative;
+      }
+      .menu-trigger,
+      .menu-trigger span {
+        position: absolute;
+        display: inline-block;
+        transition: all 0.4s;
+        box-sizing: border-box;
+      }
+      .menu-trigger {
+        position: relative;
+        position: absolute;
+        position: fixed;
+        right: 2em;
+        top: 2em;
+        width: 50px;
+        height: 40px;
+        border: none;
+        background: none;
+        appearance: none;
+        cursor: pointer;
+        @include m.mq(sp) {
+          top: 1em;
+        }
+      }
+      .menu-trigger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: v.$whiteColor;
+        border-radius: 4px;
+      }
+      .menu-trigger span:nth-of-type(1) {
+        top: 2px;
+        @include m.mq(sp) {
+          top: 5px;
+        }
+      }
+      .menu-trigger span:nth-of-type(2) {
+        top: 20px;
+        @include m.mq(sp) {
+          top: 21px;
+        }
+      }
+      .menu-trigger span:nth-of-type(3) {
+        bottom: 0;
+      }
+      #menu.active {
+        transform: rotate(360deg);
+      }
+      #menu.active span:nth-of-type(1) {
+        transform: translateY(18px) rotate(-45deg);
+      }
+      #menu.active span:nth-of-type(2) {
+        transform: translateY(0) rotate(45deg);
+      }
+      #menu.active span:nth-of-type(3) {
+        opacity: 0;
+      }
+      /* ハンバーガーメニュー */
+    }
+    .logo-white {
+      width: 5em;
       padding-top: 1em;
+      @include m.mq(sp) {
+        width: 4em;
+      }
+    }
+    .nav-box {
+      margin: 0;
     }
   }
 }
 //パンくずリスト
 .breadcrumb {
-  margin: 0 8em;
-  padding-top: 20px;
+  margin: 0 3.5em;
+  padding-top: 150px;
   max-width: 1080px;
   list-style: none;
+  @include m.mq(tab) {
+    margin: 0 2em;
+    padding-top: 110px;
+  }
 }
 
 .breadcrumb li {
@@ -350,17 +442,28 @@
 .main_text {
   text-align: center;
   padding-top: 100px;
+  @include m.mq(tab) {
+    padding-top: 50px;
+  }
 }
 .main_section {
   max-width: 1080px;
-  padding-top: 50px;
+  padding: 50px 0;
   margin: 0 auto;
+  @include m.mq(lp) {
+    width: 90vw;
+  }
   &-textbox {
     padding-top: 50px;
+    margin-left: 0;
+
     dl {
       width: 60%;
       margin-top: 30px;
       padding-left: 1em;
+      @include m.mq(tab) {
+        width: 100%;
+      }
       dt {
         position: relative;
         &::before {
@@ -391,6 +494,7 @@
   .page {
     display: flex;
     margin-top: 150px;
+    margin-left: 30px;
     gap: 45px;
   }
   .page_nation {
@@ -399,9 +503,17 @@
     padding: 30px 0;
     gap: 45px;
     background-color: #fff;
+    @include m.mq(lp) {
+      gap: 20px;
+    }
     &-img {
       width: 50%;
+      margin-left: 20px;
       transition: all 0.3s;
+      @include m.mq(lp) {
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
       &:hover {
         scale: 1.1;
       }
@@ -409,7 +521,7 @@
     &-text {
       small {
         color: v.$fontBlack;
-        display: block;
+        display: inline-block;
       }
       .before {
         // 矢印の擬似要素
@@ -418,17 +530,22 @@
         }
       }
       .next {
+        flex-direction: row-reverse;
         &:first-child::after {
           @include m.after-arrow;
         }
       }
     }
   }
-  .next {
-    flex-direction: row-reverse;
-  }
+  // .next {
+  //   flex-direction: row-reverse;
+  // }
   .only {
     margin-top: 150px;
+    margin-left: 30px;
     max-width: 45%;
+    @include m.mq(tab) {
+      max-width: 50%;
+    }
   }
 }

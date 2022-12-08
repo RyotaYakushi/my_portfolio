@@ -3,7 +3,7 @@
   const topBtn = document.querySelector(".top-btn");
   window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
-    if (scrollY >= 600) {
+    if (scrollY >= 500) {
       //classにactive付与
       topBtn.classList.add("active");
     } else {

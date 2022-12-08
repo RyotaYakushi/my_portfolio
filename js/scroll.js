@@ -1,16 +1,16 @@
 //  スクロール表示
 (() => {
-  const fixde = document.querySelector(".header-top");
+  const fixed = document.querySelector(".header-top");
   const show = document.querySelector(".logo_white");
   const hidden = document.querySelector(".logo");
   window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
     if (scrollY >= 500) {
       //classにactive付与
-      fixde.classList.add("is-active");
+      fixed.classList.add("is-active");
     } else {
       //classからactive削除
-      fixde.classList.remove("is-active");
+      fixed.classList.remove("is-active");
     }
     if (scrollY >= 500) {
       //classにshow.hidde付与

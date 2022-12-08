@@ -16,7 +16,7 @@ h1 {
   font-size: clamp(30px, 2vw, 48px);
 }
 h2 {
-  font-size: clamp(24px, 2vw, 36px);
+  font-size: clamp(20px, 2vw, 36px);
   color: v.$brownColor;
 }
 h3 {
@@ -26,17 +26,19 @@ span {
   font-weight: 300;
 }
 p {
-  font-size: clamp(12px, 2vw, 18px);
+  font-size: clamp(10px, 2vw, 18px);
 }
 dt {
-  font-size: clamp(12px, 2vw, 18px);
+  font-size: clamp(10px, 2vw, 18px);
   font-weight: 600;
 }
 dd {
   font-size: clamp(10px, 2vw, 16px);
   font-weight: 300;
 }
-
+span {
+  font-size: clamp(12px, 2vw, 16px);
+}
 a {
   text-decoration: none;
   font-size: clamp(14px, 2vw, 18px);

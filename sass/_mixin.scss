@@ -4,7 +4,7 @@
 $breakpoint: (
   sp: "screen and (max-width: 400px)",
   tab: "screen and (max-width: 768px)",
-  pc: "screen and (max-width: 1079px)",
+  lp: "screen and (max-width: 1079px)",
 );
 
 @mixin mq($bp) {
@@ -50,6 +50,7 @@ $breakpoint: (
   height: 80px;
   border-radius: 50%;
   background-color: v.$brownColor;
+  position: relative;
   position: fixed;
   bottom: 2em;
   right: 2.5em;
