@@ -137,14 +137,15 @@
 // 背景
 .fv {
   background-image: url(../images/jpg/fv.jpg);
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100vw;
-  height: 75vh;
   @include m.mq(tab) {
-    height: 85vh;
+    width: 100%;
+    height: 70vh;
+    background-attachment: inherit;
   }
 }
 // ロゴ
@@ -212,7 +213,6 @@
   padding-top: 10em;
   @include m.mq(tab) {
     width: 7em;
-    padding-top: 14em;
   }
   @include m.mq(sp) {
     width: 5em;
