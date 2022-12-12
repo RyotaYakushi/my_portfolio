@@ -37,6 +37,7 @@ h2 {
 
 h3 {
   font-size: clamp(12px, 2vw, 18px);
+  font-weight: bold;
 }
 
 span {
@@ -49,7 +50,7 @@ p {
 
 dt {
   font-size: clamp(10px, 2vw, 18px);
-  font-weight: 600;
+  font-weight: bold;
 }
 
 dd {
@@ -70,6 +71,11 @@ section {
   margin-top: 100px;
   width: 100%;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  section {
+    margin-top: 80px;
+  }
 }
 
 footer {
@@ -122,6 +128,15 @@ footer {
     appearance: none;
     cursor: pointer;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 400px) {
+  .header-top .menu-trigger {
+    width: 35px;
+    height: 30px;
+    right: 2em;
+  }
+}
+@media screen and (max-width: 768px) {
   .header-top .menu-trigger span {
     position: absolute;
     left: 0;
@@ -130,24 +145,43 @@ footer {
     background-color: #f7f7f7;
     border-radius: 4px;
   }
+}
+@media screen and (max-width: 768px) {
   .header-top .menu-trigger span:nth-of-type(1) {
     top: 2px;
   }
+}
+@media screen and (max-width: 768px) {
   .header-top .menu-trigger span:nth-of-type(2) {
     top: 20px;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 400px) {
+  .header-top .menu-trigger span:nth-of-type(2) {
+    top: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
   .header-top .menu-trigger span:nth-of-type(3) {
     bottom: 0;
   }
+}
+@media screen and (max-width: 768px) {
   .header-top #menu.active {
     transform: rotate(360deg);
   }
+}
+@media screen and (max-width: 768px) {
   .header-top #menu.active span:nth-of-type(1) {
     transform: translateY(18px) rotate(-45deg);
   }
+}
+@media screen and (max-width: 768px) {
   .header-top #menu.active span:nth-of-type(2) {
     transform: translateY(0) rotate(45deg);
   }
+}
+@media screen and (max-width: 768px) {
   .header-top #menu.active span:nth-of-type(3) {
     opacity: 0;
   }
@@ -156,8 +190,9 @@ footer {
 .is-active {
   background-color: #b6710d;
   z-index: 20;
+  width: 100%;
+  min-height: 100px;
 }
-
 .fv {
   background-image: url(../images/jpg/fv.jpg);
   background-position: center;
@@ -167,10 +202,28 @@ footer {
   width: 100vw;
   height: 75vh;
 }
+@media screen and (max-width: 768px) {
+  .fv {
+    height: 85vh;
+  }
+}
 
 .logo {
   width: 5em;
   margin-left: 8em;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    margin-left: 5em;
+    width: 4em;
+    margin-top: 1em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo {
+    width: 3em;
+    margin-left: 2em;
+  }
 }
 
 .logo_white {
@@ -178,6 +231,18 @@ footer {
   display: none;
   margin-left: 8em;
   transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .logo_white {
+    margin-left: 4em;
+    width: 4em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo_white {
+    margin-left: 2em;
+    width: 3em;
+  }
 }
 
 .is-hidden {
@@ -216,6 +281,7 @@ footer {
 @media screen and (max-width: 768px) {
   .main_title {
     width: 5em;
+    padding-top: 10em;
   }
 }
 
@@ -265,6 +331,16 @@ footer {
   margin: 0 auto;
   padding: 0 1.5em;
 }
+@media screen and (max-width: 768px) {
+  .skill_box {
+    padding: 0 2em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .skill_box {
+    display: block;
+  }
+}
 .skill_box-card {
   text-align: left;
   margin-top: 40px;
@@ -295,29 +371,66 @@ footer {
   margin: 0 auto;
   padding-top: 40px;
 }
+@media screen and (max-width: 768px) {
+  .about_box {
+    display: block;
+  }
+}
 .about_box-img {
-  width: 40%;
+  max-width: 40%;
   margin-left: 30px;
+}
+@media screen and (max-width: 768px) {
+  .about_box-img {
+    margin-left: 0;
+    margin: 0 auto;
+    max-width: 90vw;
+    width: 100%;
+  }
 }
 .about_box-img img {
   border-radius: 25px;
+}
+@media screen and (max-width: 768px) {
+  .about_box-img img {
+    aspect-ratio: 16/9;
+    width: 90vw;
+  }
 }
 .about_box-text {
   text-align: left;
   max-width: 40%;
   margin-right: 30px;
 }
+@media screen and (max-width: 768px) {
+  .about_box-text {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+}
 .about_box-text dl {
   margin-bottom: 20px;
 }
 .about_box-text dt {
-  font-weight: 500;
   margin-bottom: 5px;
+  position: relative;
+}
+.about_box-text dt::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 40px;
+  position: absolute;
+  top: 7px;
+  left: -1em;
+  background-color: #000;
+  top: 5px;
+  height: 1em;
 }
 .about_box-text h3 {
   position: relative;
   margin-bottom: 5px;
-  font-weight: 400;
 }
 .about_box-text h3::before {
   content: "";
@@ -333,7 +446,6 @@ footer {
 }
 .about_box-text p {
   margin-bottom: 20px;
-  font-weight: 300;
 }
 
 .contact > a {
@@ -346,7 +458,11 @@ footer {
   padding: 0.75em 2.5em;
   border-radius: 50px;
 }
-
+@media screen and (max-width: 400px) {
+  .contact > a {
+    font-size: 1em;
+  }
+}
 /* トップへ戻るボタン */
 .top-btn {
   width: 80px;
@@ -383,13 +499,13 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .top-btn::after {
-    left: 1.4em;
+    left: 1.5em;
   }
 }
 @media screen and (max-width: 400px) {
   .top-btn::after {
     top: 1em;
-    left: 0.9em;
+    left: 0.8em;
   }
 }
 
@@ -566,6 +682,11 @@ footer {
   text-align: center;
   padding-top: 100px;
 }
+@media screen and (max-width: 1079px) {
+  .main_text {
+    padding-top: 70px;
+  }
+}
 @media screen and (max-width: 768px) {
   .main_text {
     padding-top: 50px;
@@ -676,6 +797,7 @@ footer {
 }
 .main_section .page_nation-text .next {
   flex-direction: row-reverse;
+  display: block;
 }
 .main_section .page_nation-text .next:first-child::after {
   content: "＞";
