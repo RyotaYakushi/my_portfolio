@@ -241,11 +241,19 @@ footer {
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100vw;
+  min-height: 75vh;
 }
 @media screen and (max-width: 768px) {
   .fv {
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
+    background-attachment: inherit;
+  }
+}
+@media screen and (max-width: 400px) {
+  .fv {
+    width: 100%;
+    min-height: 65vh;
     background-attachment: inherit;
   }
 }
@@ -257,15 +265,15 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .logo {
-    margin-left: 5em;
+    margin-left: 4em;
     width: 4em;
     margin-top: 1em;
   }
 }
 @media screen and (max-width: 400px) {
   .logo {
-    width: 3em;
-    margin-left: 2em;
+    width: 4em;
+    margin-left: 1em;
   }
 }
 
@@ -322,7 +330,7 @@ footer {
 .main_title {
   width: 8em;
   margin: 0 auto;
-  padding-top: 10em;
+  padding-top: 8em;
 }
 @media screen and (max-width: 768px) {
   .main_title {
@@ -866,6 +874,12 @@ footer {
     gap: 20px;
   }
 }
+@media screen and (max-width: 400px) {
+  .main_section .page_nation {
+    padding: 0;
+    gap: 15px;
+  }
+}
 .main_section .page_nation-img {
   width: 50%;
   margin-left: 20px;
@@ -883,6 +897,9 @@ footer {
 .main_section .page_nation-text small {
   color: #333;
   display: inline-block;
+}
+.main_section .page_nation-text .before {
+  display: block;
 }
 .main_section .page_nation-text .before:first-child::before {
   content: "＜";
