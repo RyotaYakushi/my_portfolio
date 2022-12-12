@@ -7,6 +7,7 @@
     <title>ポートフォリオ_portfolio</title>
     <link rel="stylesheet" href="../css/style.css" />
     <!-- JavaScript -->
+    <script src="../js/click.js" defer></script>
     <script src="../js/topbtn.js" defer></script>
   </head>
   <body>
@@ -29,6 +30,17 @@
           </ul>
         </nav>
         <!-- humberger -->
+        <!-- humberger -->
+        <nav class="sp_nav">
+          <ul class="sp_nav-list">
+            <li class="sp_nav-item"><a href="../index.html#works">WORKS</a></li>
+            <li class="sp_nav-item"><a href="../index.html#skill">SKILL</a></li>
+            <li class="sp_nav-item"><a href="../index.html#about">ABOUT</a></li>
+            <li class="sp_nav-item">
+              <a href="../index.html#contact">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
         <div class="item">
           <button class="menu-trigger" id="menu">
             <span></span>
@@ -92,17 +104,32 @@
           <p>URL</p>
         </div>
         <!-- ページ -->
-        <a href="../html/fansite.html">
-          <div class="page_nation only">
-            <div class="page_nation-img">
-              <img src="../images/jpg/pagenation/fansite_page.jpg" alt="" />
+        <div class="page">
+          <a href="../html/fansite.html">
+            <div class="page_nation">
+              <div class="page_nation-img">
+                <img src="../images/jpg/pagenation/fansite_page.jpg" alt="" />
+              </div>
+              <div class="page_nation-text">
+                <small class="before">前へ</small>
+                <small>ファンサイト（架空）</small>
+              </div>
             </div>
-            <div class="page_nation-text">
-              <small class="before">前へ</small>
-              <small>ファンサイト（架空）</small>
+          </a>
+          <a href="../html/ecsite.html">
+            <div class="page_nation next">
+              <div class="page_nation-img">
+                <img
+                  src="../images/jpg/pagenation/ecsite_card.jpg"
+                  alt="ecサイトページ" />
+              </div>
+              <div class="page_nation-text">
+                <small class="next">次へ</small>
+                <small>ポートフォリオ </small>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </main>
     <!-- トップ戻るボタン -->

@@ -3,6 +3,8 @@
   const fixed = document.querySelector(".header-top");
   const show = document.querySelector(".logo_white");
   const hidden = document.querySelector(".logo");
+  const navColor = document.querySelectorAll(".nav-item > a");
+
   window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
     if (scrollY >= 500) {
@@ -20,6 +22,15 @@
       //classからshow.hidden削除
       show.classList.remove("is-show");
       hidden.classList.remove("is-hidden");
+    }
+    if (scrollY >= 600) {
+      navColor.forEach((element) => {
+        element.classList.add("is-color");
+      });
+    } else {
+      navColor.forEach((element) => {
+        element.classList.remove("is-color");
+      });
     }
   });
 })();

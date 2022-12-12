@@ -8,6 +8,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- JavaScript -->
+    <script src="./js/click.js" defer></script>
     <script src="./js/scroll.js" defer></script>
     <script src="./js/topbtn.js" defer></script>
   </head>
@@ -17,12 +18,14 @@
         <!-- ヘッダー -->
         <div class="header-top">
           <!-- ロゴ -->
-          <div class="logo">
-            <img src="./images/svg/logo.svg" alt="ロゴ" />
-          </div>
-          <div class="logo_white">
-            <img src="./images/svg/logo_white.svg" alt="ロゴ" />
-          </div>
+          <a href="index.html">
+            <div class="logo js-change">
+              <img src="./images/svg/logo.svg" alt="ロゴ" />
+            </div>
+            <div class="logo_white">
+              <img src="./images/svg/logo_white.svg" alt="ロゴ" />
+            </div>
+          </a>
           <!-- ナビゲーション -->
           <nav class="nav-header">
             <ul class="nav-list">
@@ -33,6 +36,14 @@
             </ul>
           </nav>
           <!-- humberger -->
+          <nav class="sp_nav">
+            <ul class="sp_nav-list">
+              <li class="sp_nav-item"><a href="#works">WORKS</a></li>
+              <li class="sp_nav-item"><a href="#skill">SKILL</a></li>
+              <li class="sp_nav-item"><a href="#about">ABOUT</a></li>
+              <li class="sp_nav-item"><a href="#contact">CONTACT</a></li>
+            </ul>
+          </nav>
           <div class="item">
             <button class="menu-trigger" id="menu">
               <span></span>

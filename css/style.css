@@ -24,6 +24,11 @@ html {
 body {
   background-color: #f7f7f7;
   font-family: "Roboto", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  position: relative;
+}
+
+:target {
+  scroll-margin-top: 150px;
 }
 
 h1 {
@@ -96,6 +101,9 @@ footer {
 .header-top .item {
   display: none;
 }
+.header-top .sp_nav {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .header-top {
     padding-top: 1em;
@@ -104,12 +112,44 @@ footer {
     z-index: 10;
     /* ハンバーガーメニュー */
   }
+  .header-top .sp_nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    min-height: 100vh;
+    background-color: #b6710d;
+    z-index: 999;
+    transition: all 0.5s;
+  }
+  .header-top .sp_nav.active {
+    width: 100%;
+  }
+  .header-top .sp_nav-list {
+    list-style-type: none;
+    position: relative;
+    margin-top: 30vh;
+  }
+  .header-top .sp_nav-list .sp_nav-item {
+    text-align: center;
+  }
+  .header-top .sp_nav-list .sp_nav-item a {
+    font-size: 1.5em;
+    padding: 1em;
+    color: #fff;
+    display: inline-block;
+  }
+  .header-top .sp_nav-list .sp_nav-item :hover {
+    background-color: #885308;
+  }
   .header-top .item {
     display: block;
     position: relative;
   }
   .header-top .menu-trigger,
 .header-top .menu-trigger span {
+    z-index: 9999;
     position: absolute;
     display: inline-block;
     transition: all 0.4s;
@@ -193,6 +233,7 @@ footer {
   width: 100%;
   min-height: 100px;
 }
+
 .fv {
   background-image: url(../images/jpg/fv.jpg);
   background-position: center;
@@ -211,6 +252,7 @@ footer {
 .logo {
   width: 5em;
   margin-left: 8em;
+  z-index: 9999;
 }
 @media screen and (max-width: 768px) {
   .logo {
@@ -272,16 +314,24 @@ footer {
 .nav-list a:hover {
   color: #b6710d;
 }
+.nav-list .is-color:hover {
+  color: #4d2e04;
+}
 
 .main_title {
   width: 8em;
   margin: 0 auto;
-  padding-top: 5em;
+  padding-top: 10em;
 }
 @media screen and (max-width: 768px) {
   .main_title {
+    width: 7em;
+    padding-top: 14em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main_title {
     width: 5em;
-    padding-top: 10em;
   }
 }
 
@@ -532,14 +582,49 @@ footer {
   align-items: center;
   margin: 0 3.5em;
   justify-content: space-between;
+  /* ハンバーガーメニュー */
 }
 .header-inner .item {
+  display: none;
+}
+.header-inner .sp_nav {
   display: none;
 }
 @media screen and (max-width: 768px) {
   .header-inner {
     margin: 0 2em;
     /* ハンバーガーメニュー */
+  }
+  .header-inner .sp_nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    min-height: 100vh;
+    background-color: #b6710d;
+    z-index: 999;
+    transition: all 0.5s;
+  }
+  .header-inner .sp_nav.active {
+    width: 100%;
+  }
+  .header-inner .sp_nav-list {
+    list-style-type: none;
+    position: relative;
+    margin-top: 30vh;
+  }
+  .header-inner .sp_nav-list .sp_nav-item {
+    text-align: center;
+  }
+  .header-inner .sp_nav-list .sp_nav-item a {
+    font-size: 1.5em;
+    padding: 1em;
+    color: #fff;
+    display: inline-block;
+  }
+  .header-inner .sp_nav-list .sp_nav-item :hover {
+    background-color: #885308;
   }
   .header-inner .item {
     display: block;
@@ -551,6 +636,7 @@ footer {
     display: inline-block;
     transition: all 0.4s;
     box-sizing: border-box;
+    z-index: 999;
   }
   .header-inner .menu-trigger {
     position: relative;
@@ -625,6 +711,9 @@ footer {
   .header-inner #menu.active span:nth-of-type(3) {
     opacity: 0;
   }
+}
+.header-inner a {
+  z-index: 9999;
 }
 .header-inner .logo-white {
   width: 5em;
@@ -736,13 +825,13 @@ footer {
 .main_section-textbox dl dd {
   margin-top: 1.5px;
 }
-.main_section-textbox p {
+.main_section-textbox .url {
   font-weight: 600;
   margin-top: 30px;
   padding-left: 1em;
   position: relative;
 }
-.main_section-textbox p::before {
+.main_section-textbox .url::before {
   content: "";
   display: inline-block;
   width: 5px;
@@ -755,10 +844,13 @@ footer {
   top: 5px;
   left: -1px;
 }
+.main_section-textbox p {
+  padding-left: 1em;
+  position: relative;
+}
 .main_section .page {
   display: flex;
   margin-top: 150px;
-  margin-left: 30px;
   gap: 45px;
 }
 .main_section .page_nation {
