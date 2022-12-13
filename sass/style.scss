@@ -287,8 +287,10 @@
   padding: 0 1.5em;
   @include m.mq(tab) {
     padding: 0 2em;
+    gap: 80px;
   }
   @include m.mq(sp) {
+    width: 100%;
     display: block;
   }
 
@@ -372,13 +374,13 @@
 }
 
 // contactページ
-.contact > a {
-  display: inline-block;
-  margin-top: 100px;
-  @include m.btn;
-  @include m.mq(sp) {
-  }
-}
+// .contact > a {
+//   display: inline-block;
+//   margin-top: 100px;
+//   @include m.btn;
+//   @include m.mq(sp) {
+//   }
+// }
 /* トップへ戻るボタン */
 .top-btn {
   @include m.top_btn;
@@ -626,26 +628,12 @@
           left: -0.9em;
         }
       }
+      a {
+        color: #333;
+      }
       dd {
         margin-top: 1.5px;
       }
-    }
-    .url {
-      font-weight: 600;
-      margin-top: 30px;
-      padding-left: 1em;
-      position: relative;
-      &::before {
-        @include m.before;
-        height: 1em;
-        top: 5px;
-        left: -1px;
-      }
-    }
-    p {
-      padding-left: 1em;
-      position: relative;
-      color: #333;
     }
   }
   // ページ遷移
