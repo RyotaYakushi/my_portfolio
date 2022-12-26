@@ -592,6 +592,7 @@ h1 > img {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  z-index: 2;
 }
 @media screen and (max-width: 768px) {
   .fv-text {
@@ -662,7 +663,7 @@ h1 > img {
     border-bottom-left-radius: initial;
   }
 }
-.tel-box {
+.tell-box {
   position: absolute;
   padding: 1rem 3rem 1rem 1rem;
   background-color: rgba(255, 255, 255, 0.5);
@@ -670,22 +671,23 @@ h1 > img {
   letter-spacing: 2px;
   top: 0;
   right: 0;
+  z-index: 3;
 }
 @media screen and (max-width: 1024px) {
-  .tel-box {
+  .tell-box {
     padding: 1rem 2rem 1rem 1rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .tel-box {
+  .tell-box {
     display: none;
   }
 }
-.tel-box strong {
+.tell-box strong {
   z-index: 2;
 }
 @media screen and (max-width: 1024px) {
-  .tel-box strong {
+  .tell-box strong {
     font-size: 1rem;
   }
 }
