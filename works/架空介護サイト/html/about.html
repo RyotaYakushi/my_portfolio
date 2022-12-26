@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>笑美園_施設概要</title>
+     <!--リセットcss  -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <!-- メインcss -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- ハンバーガーメニュー -->
+    <div class="toggle-menu">
+      <nav>
+        <ul class="humberger_nav-list">
+          <li class="humberger_nav-item hover">
+            <a href="../html/about.html">施設案内</a>
+            <ul class="humberger_item">
+              <li class="humberger_list-item">
+                <a href="../html/about.html">施設概要</a>
+              </li>
+              <li class="humberger_list-item"><a href="#">スタッフ紹介</a></li>
+              <li class="humberger_list-item"><a href="#">フロアガイド</a></li>
+            </ul>
+          </li>
+          <li class="humberger_nav-item">
+            <a href="../html/service.html">サービス案内</a>
+          </li>
+          <li class="humberger_nav-item"><a href="#">採用情報</a></li>
+          <li class="humberger_nav-item"><a href="#">アクセス</a></li>
+          <li class="humberger_nav-item">
+            <a href="form.html">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!--グリッド  -->
+    <div class="container">
+      <header class="header">
+        <div class="header-container">
+          <a href="../index.html">
+            <div class="header-logo">
+              <img src="../images/hukushi-logo.svg" alt="ヘッダーロゴ" />
+            </div>
+          </a>
+          <div class="nav-list">
+            <nav>
+              <ul class="header-nav-list">
+                <li class="header-nav-item">
+                  <a href="about.html">施設案内</a>
+                </li>
+                <li class="header-nav-item">
+                  <a href="service.html">サービス案内</a>
+                </li>
+                <li class="header-nav-item"><a href="#">採用情報</a></li>
+                <li class="header-nav-item"><a href="">アクセス</a></li>
+              </ul>
+            </nav>
+            <a href="form.html">
+              <div class="header-contact">
+                <img src="../images/png/mailicon.png" alt="メールのアイコン" />
+                <p>資料請求</p>
+              </div>
+            </a>
+          </div>
+          <!-- ハンバーガーメニュー -->
+          <div class="item">
+            <button class="menu-trigger lower" id="menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="about-mv mv">
+        <div class="mv-inner">
+          <div class="mv-headline">
+            <h2>施設概要</h2>
+          </div>
+        </div>
+      </div>
+      <!-- ==========メイン========= -->
+
+      <main class="grid-main">
+        <div class="main-inner">
+          <!-- ======パンくずリスト======= -->
+          <ol
+            class="breadcrumb"
+            itemscope
+            itemtype="https://schema.org/BreadcrumbList"
+          >
+            <!-- 1つめ -->
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <a itemprop="item" href="../index.html">
+                <span itemprop="name">TOPページ </span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
+
+            <!-- 2つめ -->
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <span itemprop="name">施設概要</span>
+              <meta itemprop="position" content="2" />
+            </li>
+          </ol>
+          <div class="about-lead">
+            <div class="lead-title">
+              <h3>理念</h3>
+            </div>
+
+            <p>
+              一人一人が自然体の笑顔になるような楽しく、安心のあるサービスをご提供致します。
+            </p>
+          </div>
+          <!-- テーブル -->
+          <div class="lead">
+            <div class="lead-title">
+              <h3>施設概要</h3>
+            </div>
+          </div>
+          <table class="profile">
+            <tr>
+              <th>施設名</th>
+              <td>特別養護老人ホーム 笑美園</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>〒000-0000 京都府京都市伏見区</td>
+            </tr>
+            <tr>
+              <th>TEL</th>
+              <td>000-000-0000</td>
+            </tr>
+            <tr>
+              <th>FAX</th>
+              <td>000-000-0000</td>
+            </tr>
+            <tr>
+              <th>代表者</th>
+              <td>ドラコ・マルフォイ</td>
+            </tr>
+            <tr>
+              <th>管理者</th>
+              <td>ダニエル・ラドクリフ</td>
+            </tr>
+            <tr>
+              <th>設立年月日</th>
+              <td>1995年10月06日</td>
+            </tr>
+            <tr>
+              <th rowspan="3">実施事業</th>
+              <td>
+                1.特別養護老人ホーム（定員:50名）<br />2.短期入所生活介護（ショートステイ）（定員:10名）<br />3.通所介護・介護予防通所介護（デイサービス）（定員:40名）
+              </td>
+            </tr>
+          </table>
+        </div>
+      </main>
+
+      <aside class="grid-sidebar">
+        <nav>
+          <ul class="aside-nav">
+            <p>サービス</p>
+            <li><a href="#">イベント</a></li>
+            <li><a href="#">料金表</a></li>
+            <li><a href="#">ブログ</a></li>
+          </ul>
+        </nav>
+        <address class="address">
+          <p>
+            社会福祉法人色彩会<br />
+            特別養護老人ホーム 笑美園<br />
+            〒000-0000<br />
+            京都府京都市伏見区<br />
+            TEL.000-000-0000<br />
+            FAX.000-000-0000
+          </p>
+        </address>
+      </aside>
+      <section class="contact full-wide-section">
+        <div class="contact-inner">
+          <div class="contact-button">
+            <a href="#">資料請求はこちらから</a>
+          </div>
+          <div class="contact-button">
+            <a href="#">サイトからお問い合わせ</a>
+          </div>
+        </div>
+      </section>
+      <!-- トップ戻るボタン -->
+      <div>
+        <a href="#" class="scroll-btn stop">
+          <p>Top</p>
+        </a>
+      </div>
+      <!-- フッター -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="head-footer">
+            <div class="head-footer-inner">
+              <nav>
+                <ul class="head_nav-item">
+                  <li><a href="#">施設案内</a></li>
+                  <li><a href="./about.html">施設概要</a></li>
+                  <li>
+                    <a href="./service.html">サービス案内</a>
+                    <ul class="list-item">
+                      <li><a href="./service.html">特別養護老人ホーム</a></li>
+                      <li><a href="#">ショートステイ</a></li>
+                      <li><a href="#">デイサービス</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">アクセス</a></li>
+                  <li><a href="#"> 採用情報 </a></li>
+                  <li><a href="#">料金表</a></li>
+                </ul>
+              </nav>
+              <div class="contact_text">
+                <p>お問い合わせ</p>
+                <strong>000-000-0000</strong>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-footer">
+            <div class="box"></div>
+            <a href="../index.html">
+              <div class="footer-logo">
+                <img src="../images/hukushi-logo.svg" alt="" />
+              </div>
+            </a>
+            <nav>
+              <ul class="bottom_nav-item">
+                <li>
+                  <a href=""><small>個人情報保護方針</small></a>
+                </li>
+                <li>
+                  <a href="#"><small>サイトポリシー </small></a>
+                </li>
+                <li>
+                  <a href="#"><small>サイトマップ</small></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

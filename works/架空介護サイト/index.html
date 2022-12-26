@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon/favicon.ico"
+      type="image/x-icon" />
+    <title>笑美園</title>
+    <!--リセットcss  -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- splide.css cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" />
+    <!-- swiper.css.cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- メインcss -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ハンバーガーメニュー -->
+    <div class="toggle-menu">
+      <nav>
+        <ul class="humberger_nav-list">
+          <li class="humberger_nav-item hover">
+            <a href="./html/about.html">施設案内</a>
+            <ul class="humberger_item">
+              <li class="humberger_list-item">
+                <a href="./html/about.html">施設概要</a>
+              </li>
+              <li class="humberger_list-item"><a href="#">スタッフ紹介</a></li>
+              <li class="humberger_list-item"><a href="#">フロアガイド</a></li>
+            </ul>
+          </li>
+          <li class="humberger_nav-item">
+            <a href="./html/service.html">サービス案内</a>
+          </li>
+          <li class="humberger_nav-item"><a href="#">採用情報</a></li>
+          <li class="humberger_nav-item"><a href="#">アクセス</a></li>
+          <li class="humberger_nav-item">
+            <a href="./html/form.html">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <header>
+      <div class="header-inner">
+        <div class="header-shape">
+          <img src="./images/png/head-parts.png" alt="流形シェイプ" />
+        </div>
+        <div class="responsive">
+          <!-- レスポンシブ用のロゴ -->
+          <div class="header_responsive_logo">
+            <img src="./images/png/header_logo.png" alt="スマホ用のロゴ" />
+          </div>
+          <!-- ハンバーガーメニュー -->
+          <div class="item">
+            <button class="menu-trigger" id="menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+        <!-- レスポンシブ用のロゴここまで -->
+        <div class="nav-list">
+          <nav>
+            <ul class="header-nav-list">
+              <li class="header-nav-item hover">
+                <a href="./html/about.html">施設案内</a>
+                <ul class="dropdown-item">
+                  <li><a href="./html/about.html">施設概要</a></li>
+                  <li><a href="#">スタッフ紹介</a></li>
+                  <li><a href="#">フロアガイド</a></li>
+                </ul>
+              </li>
+              <li class="header-nav-item">
+                <a href="./html/service.html">サービス案内</a>
+              </li>
+              <li class="header-nav-item"><a href="">採用情報</a></li>
+              <li class="header-nav-item"><a href="">アクセス</a></li>
+            </ul>
+          </nav>
+          <a href="./html/form.html">
+            <div class="header-contact">
+              <img src="./images/png/mailicon.png" alt="メールのアイコン" />
+              <p>資料請求</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="fv">
+      <div class="fv-headline">
+        <a href="#">
+          <h1>
+            <img src="./images/hukushi-logo.svg" alt="ロゴ" />
+          </h1>
+        </a>
+        <div class="fv-text">
+          <p>笑顔</p>
+          <p>自分らしさ</p>
+          <p>生き生きとした暮らし</p>
+        </div>
+      </div>
+      <div class="fv-img">
+        <!-- スライダーのコンテナ -->
+        <div class="swiper">
+          <!-- 必要に応じたwrapper -->
+          <div class="swiper-wrapper">
+            <!-- スライド -->
+            <div class="swiper-slide">
+              <img src="./images/jpg/fv_slide01.jpg" alt="メインヴィジュアル" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/jpg/fv_slide02.jpg" alt="メインヴィジュアル" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/jpg/fv_slide02.jpg" alt="メインヴィジュアル" />
+            </div>
+          </div>
+        </div>
+
+        <div class="tel-box">
+          <strong>000-000-0000</strong>
+        </div>
+      </div>
+    </div>
+    <main>
+      <!-- =====ニュース====== -->
+      <section class="news">
+        <div class="section-headline">
+          <h2>お知らせ</h2>
+          <small>NEWS</small>
+        </div>
+        <div class="news-text">
+          <dl>
+            <dt>2022/04/21</dt>
+            <dd>Lorem ipsum dolor sit elit.</dd>
+          </dl>
+          <dl>
+            <dt>2022/04/21</dt>
+            <dd>Lorem ipsum dolor sit elit.</dd>
+          </dl>
+          <dl>
+            <dt>2022/04/21</dt>
+            <dd>Lorem ipsum dolor sit elit.</dd>
+          </dl>
+        </div>
+      </section>
+      <!--=======施設案内========-->
+      <section class="information">
+        <div class="information-inner">
+          <div class="section-headline">
+            <h2>施設案内</h2>
+            <small>Information</small>
+          </div>
+          <div class="infomrmation-card_box">
+            <div class="information-card_list">
+              <div class="information-img">
+                <img src="./images/jpg/top-about01.jpg" alt="" />
+              </div>
+              <div class="information-card_list-text">
+                <h3>施設概要</h3>
+                <div class="information-button button">
+                  <a href="./html/about.html">詳しくはこちら</a>
+                </div>
+              </div>
+            </div>
+            <div class="information-card_list">
+              <div class="information-img">
+                <img src="./images/jpg/top-about02.jpg" alt="" />
+              </div>
+              <div class="information-card_list-text">
+                <h3>スタッフ紹介</h3>
+                <div class="information-button button">
+                  <a href="#">詳しくはこちら</a>
+                </div>
+              </div>
+            </div>
+            <div class="information-card_list">
+              <div class="information-img">
+                <img src="./images/jpg/top-about03.jpg" alt="" />
+              </div>
+              <div class="information-card_list-text">
+                <h3>フロアガイド</h3>
+                <div class="information-button button">
+                  <a href="#">詳しくはこちら</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  サービス案内 -->
+      <section class="service">
+        <div class="service-shape">
+          <img src="./images/png/service-parts.png" alt="あしらい" />
+        </div>
+        <div class="section-headline">
+          <h2>サービス案内</h2>
+          <small>Service</small>
+        </div>
+        <div class="service-box">
+          <div class="service-box_list">
+            <div class="service-box_img">
+              <img
+                src="./images/jpg/top-service01.jpeg"
+                alt="特別養護老人ホームの画像" />
+              <button class="button">
+                <a href="">詳しくはこちら</a>
+              </button>
+            </div>
+
+            <div class="service-box_list-text">
+              <h3>特別養護老人ホーム</h3>
+              <p>
+                要介護認定を受けた方で、身体または精神に著しく障害があり、常に介護を必要とする為、家庭での介護が困難な方々に、お食事や入浴などの介護サービスをご提供し、万全の体制で健康管理・日常生活を支援いたします。
+              </p>
+            </div>
+          </div>
+          <div class="service-box_list">
+            <div class="service-box_img">
+              <img
+                src="./images/jpg/top-service02.jpg"
+                alt="デイサービスの画像" />
+              <button class="button">
+                <a href="">詳しくはこちら</a>
+              </button>
+            </div>
+            <div class="service-box_list-text">
+              <h3>デイサービス</h3>
+              <p>
+                要支援・要介護認定を受けておられる方々に施設からの送迎車で通所していただき健康チェック、入浴、食事、レクリエーションなどのサービスの提供を図ります。<br />自宅から外へ出て気分転換をしてみませんか？
+              </p>
+            </div>
+          </div>
+          <div class="service-box_list">
+            <div class="service-box_img">
+              <img
+                src="./images/jpg/top-service03.jpg"
+                alt="ショートステイの画像" />
+              <button class="button">
+                <a href="">詳しくはこちら</a>
+              </button>
+            </div>
+
+            <div class="service-box_list-text">
+              <h3>ショートステイ</h3>
+              <p>
+                要支援・要介護認定を受けておられる方々が、短期間当施設に宿泊していただけます。
+                <br />入浴や食事、排泄の介助及び生活全般をお世話し、送迎サービスも行います。<br />ご家族の病気や事故、介護疲れ、旅行等の際にご利用ください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 採用情報 -->
+      <section class="recruit">
+        <div class="recruit-box">
+          <div class="recruit-text_box">
+            <div class="recruit-text_card">
+              <div class="recruit-headline section-headline">
+                <h2>Recruit</h2>
+                <small>採用情報</small>
+              </div>
+              <!-- レスポンシブ用の画像 -->
+              <div class="responsive__recruit__img">
+                <img
+                  src="./images/jpg/top-recruit.jpg"
+                  alt="モバイル用の画像" />
+              </div>
+              <!-- レスポンシブ用の画像ここまで -->
+              <p>
+                利用者様の日常生活の楽しみとなるような、充実した1日をお過ごしいただけるようなケアを目指しています。ひだまりの丘は、あなたの優しさ、人への想いが活きる場所です。<br />
+                資格や経験は問いません。ぜひ私たちと一緒に働いてみませんか。
+              </p>
+            </div>
+            <button class="recruit-button">
+              <a href="">詳しくはこちら</a>
+            </button>
+          </div>
+          <div class="recruit-img">
+            <img src="./images/jpg/top-recruit.jpg" alt="採用情報の画像" />
+          </div>
+        </div>
+        <div class="recruit-shape">
+          <img src="./images/png/recruit-parts.png" alt="" />
+        </div>
+      </section>
+      <!-- イベント　料金表-->
+      <section class="ivent-price">
+        <div class="ivent-price-inner">
+          <a href="#">
+            <div class="ivent">
+              <p>イベント</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="price">
+              <p>料金表</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- 施設の雰囲気 -->
+      <section class="image">
+        <div class="section-headline">
+          <h2>施設の雰囲気</h2>
+          <small>Image</small>
+        </div>
+        <div class="splide image-slide" aria-label="Splideの基本的なHTML">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./images/jpg/food.jpg" alt="施設の雰囲気の画像" />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="./images/jpg/top-service03.jpg"
+                  alt="施設の雰囲気の画像" />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="./images/jpg/top-service01.jpeg"
+                  alt=" 施設の雰囲気の画像" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="image-slide"></div>
+      </section>
+      <!-- お問い合わせ -->
+      <section class="contact">
+        <div class="contact-inner">
+          <div class="contact-button">
+            <a href="#">資料請求はこちらから</a>
+          </div>
+          <div class="contact-button">
+            <a href="#">サイトからお問い合わせ</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- トップ戻るボタン -->
+    <div>
+      <a href="#" class="scroll-btn stop">
+        <p>Top</p>
+      </a>
+    </div>
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="head-footer">
+          <div class="head-footer-inner">
+            <nav>
+              <ul class="head_nav-item">
+                <li><a href="#">施設案内</a></li>
+                <li><a href="./html/about.html">施設概要</a></li>
+                <li>
+                  <a href="./html/service.html">サービス案内</a>
+                  <ul class="list-item">
+                    <li>
+                      <a href="./html/service.html">特別養護老人ホーム</a>
+                    </li>
+                    <li><a href="#">ショートステイ</a></li>
+                    <li><a href="#">デイサービス</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">アクセス</a></li>
+                <li><a href="#"> 採用情報 </a></li>
+                <li><a href="#">料金表</a></li>
+              </ul>
+            </nav>
+            <div class="contact_text">
+              <p>お問い合わせ</p>
+              <strong>００－０００－００００</strong>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-footer">
+          <div class="box"></div>
+          <a href="./index.html">
+            <div class="footer-logo">
+              <img src="./images/hukushi-logo.svg" alt="" />
+            </div>
+          </a>
+          <nav>
+            <ul class="bottom_nav-item">
+              <li>
+                <a href=""><small>個人情報保護方針</small></a>
+              </li>
+              <li>
+                <a href="#"><small>サイトポリシー </small></a>
+              </li>
+              <li>
+                <a href="#"><small>サイトマップ</small></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <!-- splide.js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.2/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+
+    <!-- swiper.js.cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
